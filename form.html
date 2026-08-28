@@ -20,7 +20,7 @@
     <body>
       <h1>survey part</h1>
       <p id="welcome"> Welcome to the survey part of the movie web.<i> Please your information matters </i></p>
-        <form action="https://formspree.io/f/mvkpdybk" method="post">
+      <form action="https://formspree.io/f/mvkpdybk" method="post">
          <p> YOUR NAME:
             <input type="text" name="name" size="15" maxlength="20" />
          </p>
@@ -29,7 +29,7 @@
          </p>
          <hr />
          <p>
-         <label> Age: <input type="text" name="age"/></label>
+         <label> Age: <input type="date" name="age"/></label>
          <br/>
          Gender:
          <input id="female" type="radio" name="gender" value="f" />
@@ -37,15 +37,23 @@
          <input id="male" type="radio" name="gender" value="m"/>
          <label for="male">male</label>
          </p>
-         <p> <i>WHAT INTRESTES YOU ABOUT MOVIES ?</i> </p>
+         <p> <i>WHAT INTRESTES YOU ABOUT MOVIES ?</i>
+            <br/> 
          <textarea name="comments" cols="30" rows="6" placeholder="write your comments here"></textarea>
+         </p>
          <hr />
+         <p> Who do you like watching movie with ?
+            <br/>
+            <label> <input type="radio" name="people" value="family" checked/> Family</label>
+            <label> <input type="radio" name="people" value="friends" /> Friends</label>
+            <label> <input type="radio" name="people" value="Alone"/> Alone</label>
+         </p>
          <p class="movie"> WHAT TYPE OF MOVIE DO YOU WATCH? 
             <br />
             <input type="radio" name="MOVIE" value="hollywood" checked="checked" /> hollywood
             <input type="radio" name="MOVIE" value="bollywood" /> bollywood
             <input type="radio" name="MOVIE" value="nollywood" /> nollywood
-            <input type="radio" name="MOVIE" value="none" /> none
+            <input type="radio" name="MOVIE" value="none" /> others
          </p>
          <hr />
          <p> Which movie(s) would you like to watch again?
@@ -57,15 +65,17 @@
             <input type="checkbox" name="movie" value="none_of_the_above" /> None of the above 
          </p>
          <hr />
-         <p class="first">What device do you use in watching movies?</p>
+         <p class="first">What device do you use in watching movies?
          <select class="first" name="devices">
             <option value="television" selected="selected">Television</option>
             <option value="mobile_phone"> Mobile phone</option>
             <option value="laptop"> Laptop</option>
             <option value="desktop"> desktop </option>
          </select>
+         </p>
          <hr />
-         <p>Which days of the week do you watch movies? (NOTE:<i>hold down your control key(for pc) or your command key(for you macbook) to select more than one</i>)</p>
+         <p>Which days of the week do you watch movies? (NOTE:<i>hold down your control key(for pc) or your command key(for you macbook) to select more than one</i>
+            <br/>
          <select name="days" size="7" multiple="multiple">
             <option value="MONDAY" selected="selected" > MONDAY</option>
             <option value="TUESDAY"> TUESDAY</option>
@@ -75,10 +85,11 @@
             <option value="SATURDAY"> SATURDAY</option>
             <option value="SUNDAY" selected="selected"> SUNDAY</option>
          </select>
+         </p>
          <hr />
-         <p><i>you can upload your favourite movie here...</i></p>
+         <p><i>you can upload your favourite movie here...</i>
          <input type="file" name="user's_movie"/> <br />
-         <input id="submit" type="submit" value="upload" />
+         </p>
          <hr/>
          <p>
             <fieldset>
@@ -92,6 +103,5 @@
             </fieldset>
          </p>
         <center> <input id="submit" type="submit" value="submit" /></center>
-         </p>
       </form>
     </body>
